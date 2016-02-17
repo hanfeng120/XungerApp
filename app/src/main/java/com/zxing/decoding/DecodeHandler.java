@@ -16,15 +16,12 @@
 
 package com.zxing.decoding;
 
-import java.util.Hashtable;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 
-import com.ericssonlabs.R;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.MultiFormatReader;
@@ -34,6 +31,10 @@ import com.google.zxing.common.HybridBinarizer;
 import com.zxing.activity.CaptureActivity;
 import com.zxing.camera.CameraManager;
 import com.zxing.camera.PlanarYUVLuminanceSource;
+
+import java.util.Hashtable;
+
+import club.xunger.xungerapp.R;
 
 final class DecodeHandler extends Handler {
 
@@ -50,11 +51,14 @@ final class DecodeHandler extends Handler {
 
     @Override
     public void handleMessage(Message message) {
-        if (message.what == R.id.decode) {
-            //Log.d(TAG, "Got decode message");
-            decode((byte[]) message.obj, message.arg1, message.arg2);
-        } else if (message.what == R.id.quit) {
-            Looper.myLooper().quit();
+        switch (message.what) {
+            case R.id.decode:
+                //Log.d(TAG, "Got decode message");
+                decode((byte[]) message.obj, message.arg1, message.arg2);
+                break;
+            case R.id.quit:
+                Looper.myLooper().quit();
+                break;
         }
     }
 

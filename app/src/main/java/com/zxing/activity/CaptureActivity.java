@@ -15,10 +15,9 @@ import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.Toast;
 
-import com.ericssonlabs.R;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 import com.zxing.camera.CameraManager;
@@ -28,6 +27,8 @@ import com.zxing.view.ViewfinderView;
 
 import java.io.IOException;
 import java.util.Vector;
+
+import club.xunger.xungerapp.R;
 
 /**
  * Initial the camera
@@ -46,9 +47,7 @@ public class CaptureActivity extends Activity implements Callback {
     private boolean playBeep;
     private static final float BEEP_VOLUME = 0.10f;
     private boolean vibrate;
-    private ImageView cancelScanButton;
-    private OnCompleteListener listener;
-
+    private Button cancelScanButton;
 
     /**
      * Called when the activity is first created.
@@ -60,7 +59,7 @@ public class CaptureActivity extends Activity implements Callback {
         //ViewUtil.addTopView(getApplicationContext(), this, R.string.scan_card);
         CameraManager.init(getApplication());
         viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
-        cancelScanButton = (ImageView) this.findViewById(R.id.btn_cancel_scan);
+        cancelScanButton = (Button) findViewById(R.id.btn_cancel_scan);
         hasSurface = false;
         inactivityTimer = new InactivityTimer(this);
     }
@@ -132,8 +131,7 @@ public class CaptureActivity extends Activity implements Callback {
             Bundle bundle = new Bundle();
             bundle.putString("result", resultString);
             resultIntent.putExtras(bundle);
-            //			CompleteScan.getInstance().onCompleteScan(resultIntent);
-            setResult(RESULT_OK, resultIntent);
+            this.setResult(RESULT_OK, resultIntent);
         }
         CaptureActivity.this.finish();
     }
@@ -230,6 +228,5 @@ public class CaptureActivity extends Activity implements Callback {
             mediaPlayer.seekTo(0);
         }
     };
-
 
 }

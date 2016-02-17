@@ -16,9 +16,6 @@
 
 package com.zxing.view;
 
-import java.util.Collection;
-import java.util.HashSet;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -28,9 +25,13 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.ericssonlabs.R;
 import com.google.zxing.ResultPoint;
 import com.zxing.camera.CameraManager;
+
+import java.util.Collection;
+import java.util.HashSet;
+
+import club.xunger.xungerapp.R;
 
 /**
  * This view is overlaid on top of the camera preview. It adds the viewfinder rectangle and partial

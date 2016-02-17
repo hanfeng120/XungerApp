@@ -1,0 +1,9 @@
+/local.properties
+/bin
+/build
+/.gradle
+/*/build
+/.idea
+/*.iml
+/*/*.iml
+/channels

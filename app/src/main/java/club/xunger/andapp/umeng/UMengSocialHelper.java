@@ -1,23 +1,23 @@
-package club.xunger.andapp.share;
+package club.xunger.andapp.umeng;
 
 import com.umeng.socialize.PlatformConfig;
 
 /**
  * Created by zhaoxunyi on 2016/2/18.
  */
-public final class ShareManager {
+public class UMengSocialHelper {
 
-    private volatile static ShareManager instance;
+    private volatile static UMengSocialHelper instance;
 
-    private ShareManager() {
+    private UMengSocialHelper() {
 
     }
 
-    public static ShareManager getInstance() {
+    public static UMengSocialHelper getInstance() {
         if (instance == null) {
-            synchronized (ShareManager.class) {
+            synchronized (UMengSocialHelper.class) {
                 if (instance == null) {
-                    instance = new ShareManager();
+                    instance = new UMengSocialHelper();
                 }
             }
         }
@@ -25,6 +25,10 @@ public final class ShareManager {
     }
 
     public void init() {
+        initUMengSocial();
+    }
+
+    public void initUMengSocial() {
         PlatformConfig.setWeixin("wx967daebe835fbeac", "5bb696d9ccd75a38c8a0bfe0675559b3");
         //微信 appid appsecret
         PlatformConfig.setSinaWeibo("3921700954", "04b48b094faeb16683c32669824ebdad");

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="club.xunger.xuegerapp.barcodedemo.CodeActivity">
+    tools:context="club.xunger.xuegerapp.barcode.CodeActivity">
 
     <Button
         android:id="@+id/scan"

@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import club.xunger.andapp.barcode.CodeActivity;
+import club.xunger.andapp.dragsort.DragSortActivity;
 import club.xunger.andapp.framework.BaseActivity;
 import club.xunger.andapp.oauth.AuthActivity;
 import club.xunger.andapp.share.ShareActivity;
@@ -15,7 +16,7 @@ import club.xunger.xungerapp.R;
 public class MainActivity extends BaseActivity {
 
     private ListView listView;
-    private String[] data = new String[]{"BarCode", "UMengShare", "OAuth"};
+    private String[] data = new String[]{"BarCode", "UMengShare", "OAuth", "DragSortListView"};
 
     @Override
     protected int getContentViewResId() {
@@ -39,17 +40,22 @@ public class MainActivity extends BaseActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent();
                 switch (i) {
                     case 0:
-                        startActivity(new Intent(MainActivity.this, CodeActivity.class));
+                        intent.setClass(getContext(), CodeActivity.class);
                         break;
                     case 1:
-                        startActivity(new Intent(MainActivity.this, ShareActivity.class));
+                        intent.setClass(getContext(), ShareActivity.class);
                         break;
                     case 2:
-                        startActivity(new Intent(MainActivity.this, AuthActivity.class));
+                        intent.setClass(getContext(), AuthActivity.class);
+                        break;
+                    case 3:
+                        intent.setClass(getContext(), DragSortActivity.class);
                         break;
                 }
+                startActivity(intent);
             }
         });
     }

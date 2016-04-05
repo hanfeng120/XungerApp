@@ -80,6 +80,8 @@
         </activity>
         <activity android:name="club.xunger.andapp.analytics.AnalyticsActivity">
         </activity>
+        <activity android:name="club.xunger.andapp.dragsort.DragSortActivity">
+        </activity>
     </application>
 
 </manifest>

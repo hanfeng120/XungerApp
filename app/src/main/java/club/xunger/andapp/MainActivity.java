@@ -19,7 +19,7 @@ import club.xunger.xungerapp.R;
 public class MainActivity extends BaseActivity {
 
     private ListView listView;
-    private String[] data = new String[]{"BarCode", "UMengShare", "OAuth", "DragSortListView", "WindowManager"};
+    private String[] data = new String[]{"BarCode", "UMengShare", "OAuth", "DragSortListView", "WindowManager", "PopupWindow"};
 
     @Override
 

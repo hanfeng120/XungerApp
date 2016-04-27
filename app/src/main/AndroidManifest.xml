@@ -87,6 +87,8 @@
         </activity>
         <activity android:name="club.xunger.andapp.window.WindowManagerActivity">
         </activity>
+        <activity android:name="club.xunger.andapp.popupwindow.PopupWindowActivity">
+        </activity>
     </application>
 
 </manifest>

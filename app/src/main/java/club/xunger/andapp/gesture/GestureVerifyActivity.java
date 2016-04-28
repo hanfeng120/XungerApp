@@ -1,20 +1,15 @@
-package club.xunger.andapp.popupwindow;
+package club.xunger.andapp.gesture;
 
 import android.view.View;
 
 import club.xunger.andapp.framework.BaseActivity;
 import club.xunger.xungerapp.R;
 
-public class PopupWindowActivity extends BaseActivity {
-
-    @Override
-    public void onClick(View v) {
-
-    }
+public class GestureVerifyActivity extends BaseActivity {
 
     @Override
     protected int getContentViewResId() {
-        return R.layout.activity_popup_window;
+        return R.layout.activity_gesture_verify;
     }
 
     @Override
@@ -29,7 +24,7 @@ public class PopupWindowActivity extends BaseActivity {
 
     @Override
     protected void initContent() {
-        findViewById(R.id.show_popupwindow).setOnClickListener(getOnClickListener());
+
     }
 
     @Override
@@ -44,6 +39,11 @@ public class PopupWindowActivity extends BaseActivity {
 
     @Override
     protected void refreshView(int viewId) {
+
+    }
+
+    @Override
+    public void onClick(View v) {
 
     }
 }

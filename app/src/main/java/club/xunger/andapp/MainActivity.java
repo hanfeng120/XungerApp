@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import club.xunger.andapp.barcode.CodeActivity;
 import club.xunger.andapp.dragsort.DragSortActivity;
 import club.xunger.andapp.framework.BaseActivity;
+import club.xunger.andapp.gesture.GestureActivity;
 import club.xunger.andapp.oauth.AuthActivity;
 import club.xunger.andapp.share.ShareActivity;
 import club.xunger.andapp.window.WindowManagerActivity;
@@ -19,7 +20,7 @@ import club.xunger.xungerapp.R;
 public class MainActivity extends BaseActivity {
 
     private ListView listView;
-    private String[] data = new String[]{"BarCode", "UMengShare", "OAuth", "DragSortListView", "WindowManager", "PopupWindow"};
+    private String[] data = new String[]{"BarCode", "UMengShare", "OAuth", "DragSortListView", "WindowManager", "Dialog & Window", "GesturePassword"};
 
     @Override
 
@@ -60,6 +61,11 @@ public class MainActivity extends BaseActivity {
                         break;
                     case 4:
                         intent.setClass(getContext(), WindowManagerActivity.class);
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        intent.setClass(getContext(), GestureActivity.class);
                         break;
                 }
                 startActivity(intent);

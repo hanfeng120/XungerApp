@@ -89,6 +89,12 @@
         </activity>
         <activity android:name="club.xunger.andapp.popupwindow.PopupWindowActivity">
         </activity>
+        <activity android:name="club.xunger.andapp.gesture.GestureActivity">
+        </activity>
+        <activity android:name="club.xunger.andapp.gesture.GestureEditActivity">
+        </activity>
+        <activity android:name="club.xunger.andapp.gesture.GestureVerifyActivity">
+        </activity>
     </application>
 
 </manifest>

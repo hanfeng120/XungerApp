@@ -2,8 +2,8 @@ package club.xunger.andapp.gesture;
 
 import android.view.View;
 
-import club.xunger.andapp.framework.BaseActivity;
 import club.xunger.xungerapp.R;
+import cn.xunger.xungerbaselibrary.framework.BaseActivity;
 
 public class GestureVerifyActivity extends BaseActivity {
 

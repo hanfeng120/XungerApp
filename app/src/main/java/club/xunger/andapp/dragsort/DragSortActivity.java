@@ -10,10 +10,10 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import club.xunger.andapp.framework.BaseActivity;
 import club.xunger.andapp.framework.dragsort.DragSortController;
 import club.xunger.andapp.framework.dragsort.DragSortListView;
 import club.xunger.xungerapp.R;
+import cn.xunger.xungerbaselibrary.framework.BaseActivity;
 
 public class DragSortActivity extends BaseActivity {
 

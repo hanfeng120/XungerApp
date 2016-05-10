@@ -3,8 +3,8 @@ package club.xunger.andapp.gesture;
 import android.content.Intent;
 import android.view.View;
 
-import club.xunger.andapp.framework.BaseActivity;
 import club.xunger.xungerapp.R;
+import cn.xunger.xungerbaselibrary.framework.BaseActivity;
 
 public class GestureActivity extends BaseActivity {
 

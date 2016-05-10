@@ -13,8 +13,8 @@ import com.umeng.socialize.bean.SHARE_MEDIA;
 
 import java.util.Map;
 
-import club.xunger.andapp.framework.BaseActivity;
 import club.xunger.xungerapp.R;
+import cn.xunger.xungerbaselibrary.framework.BaseActivity;
 
 public class AuthActivity extends BaseActivity {
 

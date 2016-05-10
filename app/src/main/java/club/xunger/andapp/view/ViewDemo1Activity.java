@@ -2,8 +2,8 @@ package club.xunger.andapp.view;
 
 import android.view.View;
 
-import club.xunger.andapp.framework.BaseActivity;
 import club.xunger.xungerapp.R;
+import cn.xunger.xungerbaselibrary.framework.BaseActivity;
 
 /**
  * Created by zhaoxunyi on 2016/5/10.

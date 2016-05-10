@@ -10,13 +10,13 @@ import java.util.ArrayList;
 
 import club.xunger.andapp.barcode.CodeActivity;
 import club.xunger.andapp.dragsort.DragSortActivity;
-import club.xunger.andapp.framework.BaseActivity;
 import club.xunger.andapp.gesture.GestureActivity;
 import club.xunger.andapp.oauth.AuthActivity;
 import club.xunger.andapp.share.ShareActivity;
 import club.xunger.andapp.view.ViewDemo1Activity;
 import club.xunger.andapp.window.WindowManagerActivity;
 import club.xunger.xungerapp.R;
+import cn.xunger.xungerbaselibrary.framework.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 

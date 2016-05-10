@@ -10,8 +10,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import club.xunger.andapp.framework.BaseActivity;
 import club.xunger.xungerapp.R;
+import cn.xunger.xungerbaselibrary.framework.BaseActivity;
 
 public class WindowManagerActivity extends BaseActivity {
 

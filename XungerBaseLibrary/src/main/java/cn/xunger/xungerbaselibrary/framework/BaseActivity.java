@@ -8,6 +8,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -34,9 +35,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     }
 
     private void init() {
-        if (initBackActionBar()) {
-            initBackBar();
-        }
+        initBackBar();
         if (handleIntent()) {
             initView();
             initData();
@@ -213,6 +212,14 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Override
     public boolean handleMessage(Message msg) {
         return false;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private static class BaseHandler extends Handler {

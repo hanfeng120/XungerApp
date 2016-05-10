@@ -14,13 +14,14 @@ import club.xunger.andapp.framework.BaseActivity;
 import club.xunger.andapp.gesture.GestureActivity;
 import club.xunger.andapp.oauth.AuthActivity;
 import club.xunger.andapp.share.ShareActivity;
+import club.xunger.andapp.view.ViewDemo1Activity;
 import club.xunger.andapp.window.WindowManagerActivity;
 import club.xunger.xungerapp.R;
 
 public class MainActivity extends BaseActivity {
 
     private ListView listView;
-    private String[] data = new String[]{"BarCode", "UMengShare", "OAuth", "DragSortListView", "WindowManager", "Dialog & Window", "GesturePassword"};
+    private String[] data = new String[]{"BarCode", "UMengShare", "OAuth", "DragSortListView", "WindowManager", "Dialog & Window", "GesturePassword", "ViewDemo"};
 
     @Override
 
@@ -66,6 +67,9 @@ public class MainActivity extends BaseActivity {
                         break;
                     case 6:
                         intent.setClass(getContext(), GestureActivity.class);
+                        break;
+                    case 7:
+                        intent.setClass(getContext(), ViewDemo1Activity.class);
                         break;
                 }
                 startActivity(intent);

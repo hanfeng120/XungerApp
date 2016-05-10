@@ -95,6 +95,8 @@
         </activity>
         <activity android:name="club.xunger.andapp.gesture.GestureVerifyActivity">
         </activity>
+        <activity android:name="club.xunger.andapp.view.ViewDemo1Activity">
+        </activity>
     </application>
 
 </manifest>

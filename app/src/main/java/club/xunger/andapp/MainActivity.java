@@ -9,11 +9,12 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import club.xunger.andapp.barcode.CodeActivity;
+import club.xunger.andapp.core.utils.XungerPackageNames;
+import club.xunger.andapp.core.utils.XungerToast;
 import club.xunger.andapp.dragsort.DragSortActivity;
 import club.xunger.andapp.gesture.GestureActivity;
 import club.xunger.andapp.oauth.AuthActivity;
 import club.xunger.andapp.share.ShareActivity;
-import club.xunger.andapp.view.ViewDemo1Activity;
 import club.xunger.andapp.window.WindowManagerActivity;
 import club.xunger.xungerapp.R;
 import cn.xunger.xungerbaselibrary.framework.BaseActivity;
@@ -69,12 +70,21 @@ public class MainActivity extends BaseActivity {
                         intent.setClass(getContext(), GestureActivity.class);
                         break;
                     case 7:
-                        intent.setClass(getContext(), ViewDemo1Activity.class);
-                        break;
+                        startApp(XungerPackageNames.PACKAGE_NAME_VIEWDEMO);
+                        return;
                 }
                 startActivity(intent);
             }
         });
+    }
+
+    private void startApp(String appPackageName) {
+        try {
+            Intent intent = getPackageManager().getLaunchIntentForPackage(appPackageName);
+            startActivity(intent);
+        } catch (Exception e) {
+            XungerToast.shortToast("未安装该应用");
+        }
     }
 
     @Override

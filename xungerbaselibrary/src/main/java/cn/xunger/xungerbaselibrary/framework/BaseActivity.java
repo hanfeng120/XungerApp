@@ -47,8 +47,8 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     /**
      * step0 初始化ActionBar
      */
-    protected void initBackBar() {
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    private void initBackBar() {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(initBackActionBar());
     }
 
     /**
